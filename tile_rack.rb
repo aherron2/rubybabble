@@ -6,7 +6,7 @@ class TileRack < TileGroup
   end
 
   def has_tiles_for?(text)
-    temp_array = @tiles.hand.split("")
+    temp_array = hand.split("")
     text_array = text.split("")
     text_array.each do |tile|
       index = temp_array.find_index(tile)
@@ -21,7 +21,7 @@ class TileRack < TileGroup
     word = Word.new
     text_array.each do |tile|
       word.append(tile.to_sym)
-      @tiles.delete_at(find_index(tile))
+      remove(tile.to_sym)
     end
     word
   end

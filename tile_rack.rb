@@ -1,3 +1,6 @@
+require './tile_group.rb'
+require './word.rb'
+
 class TileRack < TileGroup
 
   def number_of_tiles_needed
